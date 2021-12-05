@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: Raleway, Sans-serif;
+    background-color: #000;
+}
+
+header{
+    height: 100vh;
+    position: relative;
+    display: flex;
+
+}
+
+.cover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+.cover-date{
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    opacity: .7;
+}
+
+nav{
+    background-color: white;
+    z-index: 222;
+    width: 40%;
+    height: 20%;
+    overflow: hidden;
+}
+
+.nav-closed{
+    position: absolute;
+    height: 20%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.nav-closed ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+
+}
+
+.nav-closed ul li{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-open {
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.clothing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.clothing h2{
+    font-size: 50px;
+    color: #913656;
+}
+
+.clothing ul li{
+    list-style: none;
+}
+
+.clothing ul li a{
+    text-decoration: none;
+    color: #913656;
+}
+
+.nav-images{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-images img {
+    width: 250px;
+}

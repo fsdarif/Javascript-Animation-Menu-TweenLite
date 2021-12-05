@@ -3,34 +3,26 @@ const navOpen = document.querySelector('.nav-open');
 
 const tl = new TimelineLite({ paused: true,  reversed: true });
 
-tl.to(
-    '.cover', 
-    1, {
-    width:'60%',
-    ease: Power2.easeOut
-})
-.to(
-    'nav', 
-    1, 
-    {
+tl.to( '.cover', 1, {
+        width:'60%',
+        ease: Power2.easeOut
+    })
+
+.to( 'nav', 1, {
     height:'100%',
     ease: Power2.easeOut
-    }, '-=1'
-    )
-.fromTo(".nav-open", 0.5, 
-    {
+    }, '-=1' )
+
+.fromTo(".nav-open", 0.5, {
     opacity: 0,
     x: -50,
-    ease: Power2.easeOut
-    },
+    ease: Power2.easeOut },
     {
     opacity: 1,
     x: 0,
     onComplete: function () {
         navOpen.style.pointerEvents = "auto";
-    }    
-    }
-    )
+    }})
 
 navButton.addEventListener('click', (e) => {
     if(tl.isActive()) {
@@ -38,8 +30,7 @@ navButton.addEventListener('click', (e) => {
         e.stopImmediatePropagation();
         return false;
     }
-
-
+    
     toggleTween(tl);
 })
 
